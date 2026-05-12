@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khurshidalam Ansari – CSV & OT Compliance Specialist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0b1f3a;
+  --navy-mid: #1a3a5c;
+  --navy-light: #2d5a8a;
+  --teal: #0e7490;
+  --teal-light: #e0f4f8;
+  --gold: #c08b2e;
+  --gold-light: #fdf3e3;
+  --white: #ffffff;
+  --off-white: #f8fafc;
+  --surface: #f1f5f9;
+  --border: #e2e8f0;
+  --border-dark: #cbd5e1;
+  --text: #0f172a;
+  --text-mid: #475569;
+  --text-light: #94a3b8;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(11,31,58,0.1);
+  --shadow-lg: 0 12px 40px rgba(11,31,58,0.14);
+  --radius: 10px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--off-white); color: var(--text); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  height: 60px;
+  background: rgba(11,31,58,0.97);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2.5rem;
+}
+.nav-brand { display: flex; align-items: center; gap: 10px; }
+.nav-monogram {
+  width: 34px; height: 34px;
+  background: linear-gradient(135deg, var(--gold), #e8a83e);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 14px; font-weight: 700;
+  color: var(--navy); flex-shrink: 0;
+}
+.nav-logo { font-family: var(--serif); font-size: 17px; color: #fff; }
+.nav-links { display: flex; gap: 1.8rem; list-style: none; }
+.nav-links a {
+  font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.65);
+  text-decoration: none; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.2s;
+}
+.nav-links a:hover { color: #fff; }
+.nav-li-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.7);
+  text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.25); padding: 5px 14px; border-radius: 20px;
+  transition: all 0.2s;
+}
+.nav-li-btn:hover { color: #fff; border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.08); }
+.nav-li-btn svg { width: 13px; height: 13px; fill: currentColor; }
+
+/* HERO */
+#hero {
+  min-height: 100vh; display: flex; align-items: center;
+  position: relative; overflow: hidden; background: var(--navy);
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(14,116,144,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(192,139,46,0.12) 0%, transparent 50%),
+    linear-gradient(160deg, #0b1f3a 0%, #0d2545 40%, #0b1f3a 100%);
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-glow {
+  position: absolute; width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(14,116,144,0.14) 0%, transparent 70%);
+  top: 5%; right: 0; border-radius: 50%; pointer-events: none;
+}
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 1000px; margin: 0 auto;
+  padding: 100px 2.5rem 60px;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.5rem;
+  animation: fadeUp 0.6s ease both;
+}
+.hero-eyebrow::before { content: ''; display: inline-block; width: 28px; height: 1px; background: var(--gold); }
+.hero-name {
+  font-family: var(--serif); font-size: clamp(46px, 8vw, 78px);
+  line-height: 1.05; color: #fff; letter-spacing: -0.025em;
+  margin-bottom: 0.25em; animation: fadeUp 0.6s 0.1s ease both;
+}
+.hero-name span { color: var(--gold); }
+.hero-tagline {
+  font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.62);
+  max-width: 500px; margin-bottom: 2rem; line-height: 1.65;
+  animation: fadeUp 0.6s 0.2s ease both;
+}
+.hero-pills {
+  display: flex; flex-wrap: wrap; gap: 7px;
+  margin-bottom: 2.5rem; animation: fadeUp 0.6s 0.3s ease both;
+}
+.pill {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,0.65); background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.14); padding: 4px 12px; border-radius: 20px;
+}
+.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; animation: fadeUp 0.6s 0.4s ease both; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.03em;
+  text-decoration: none; border-radius: 8px; transition: all 0.22s; cursor: pointer; border: none; font-family: var(--sans);
+}
+.btn-gold { background: linear-gradient(135deg, var(--gold), #d4a040); color: var(--navy); }
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(192,139,46,0.4); }
+.btn-li { background: #0077b5; color: #fff; }
+.btn-li:hover { background: #005885; transform: translateY(-2px); }
+.btn-li svg { width: 15px; height: 15px; fill: currentColor; }
+.btn-ghost { background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.2); }
+.btn-ghost:hover { background: rgba(255,255,255,0.14); transform: translateY(-2px); }
+.hero-stats {
+  display: flex; flex-wrap: wrap; gap: 0;
+  margin-top: 3.5rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;
+  animation: fadeUp 0.6s 0.5s ease both;
+}
+.h-stat { flex: 1; min-width: 120px; padding-right: 2rem; border-right: 1px solid rgba(255,255,255,0.1); margin-right: 2rem; }
+.h-stat:last-child { border-right: none; margin-right: 0; }
+.h-stat-num { font-family: var(--serif); font-size: 34px; color: var(--gold); line-height: 1; }
+.h-stat-lbl { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 4px; }
+
+/* SECTIONS */
+.section { padding: 90px 0; }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 2.5rem; }
+.sec-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
+.sec-title { font-family: var(--serif); font-size: clamp(28px, 4vw, 42px); color: var(--navy); line-height: 1.15; margin-bottom: 0.5rem; }
+.sec-line { width: 48px; height: 3px; background: linear-gradient(90deg, var(--gold), transparent); margin: 1rem 0 2.5rem; border-radius: 2px; }
+
+/* ABOUT */
+#about { background: #fff; border-bottom: 1px solid var(--border); }
+.about-wrap { display: grid; grid-template-columns: 3fr 2fr; gap: 4rem; align-items: start; }
+.about-text p { color: var(--text-mid); margin-bottom: 1rem; font-size: 15px; line-height: 1.85; }
+.stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.stat-card {
+  background: var(--navy); border-radius: var(--radius); padding: 1.4rem;
+  position: relative; overflow: hidden;
+}
+.stat-card::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(14,116,144,0.3), transparent); pointer-events: none;
+}
+.stat-num { font-family: var(--serif); font-size: 38px; color: var(--gold); line-height: 1; margin-bottom: 4px; position: relative; z-index: 1; }
+.stat-lbl { font-size: 11px; color: rgba(255,255,255,0.5); position: relative; z-index: 1; }
+
+/* COMPETENCIES */
+#competencies { background: var(--surface); border-bottom: 1px solid var(--border); }
+.comp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; }
+.comp-card {
+  background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem;
+  transition: box-shadow 0.22s, transform 0.22s; position: relative; overflow: hidden;
+}
+.comp-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--navy-mid), var(--teal)); }
+.comp-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.comp-icon {
+  width: 42px; height: 42px; background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+  border-radius: 10px; display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1rem; font-size: 20px;
+}
+.comp-heading { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 0.8rem; }
+.comp-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.tag { font-family: var(--mono); font-size: 10px; color: var(--teal); background: var(--teal-light); border: 1px solid rgba(14,116,144,0.2); padding: 2px 9px; border-radius: 4px; }
+
+/* EXPERIENCE */
+#experience { background: #fff; border-bottom: 1px solid var(--border); }
+.timeline { position: relative; padding-left: 20px; }
+.timeline::before { content: ''; position: absolute; top: 8px; bottom: 0; left: 0; width: 2px; background: linear-gradient(to bottom, var(--navy), var(--border)); }
+.exp-item { position: relative; padding-left: 36px; margin-bottom: 2.8rem; }
+.exp-dot { position: absolute; left: -28px; top: 14px; width: 16px; height: 16px; border-radius: 50%; background: #fff; border: 2.5px solid var(--border-dark); }
+.exp-item:first-child .exp-dot { background: var(--navy); border-color: var(--navy); box-shadow: 0 0 0 4px rgba(11,31,58,0.12); }
+.exp-card { background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem 1.6rem; transition: box-shadow 0.2s; }
+.exp-card:hover { box-shadow: var(--shadow-md); }
+.exp-header { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.3rem; }
+.exp-role { font-family: var(--serif); font-size: 19px; color: var(--navy); line-height: 1.2; }
+.exp-period { font-family: var(--mono); font-size: 10px; color: var(--gold); letter-spacing: 0.08em; white-space: nowrap; background: var(--gold-light); border: 1px solid rgba(192,139,46,0.25); padding: 3px 10px; border-radius: 4px; margin-top: 4px; }
+.exp-company { font-size: 13px; font-weight: 600; color: var(--teal); margin-bottom: 0.9rem; }
+.exp-bullets { list-style: none; }
+.exp-bullets li { font-size: 13.5px; color: var(--text-mid); padding: 4px 0 4px 18px; position: relative; line-height: 1.65; }
+.exp-bullets li::before { content: '›'; position: absolute; left: 0; color: var(--gold); font-size: 16px; line-height: 1.4; }
+.achievement-banner {
+  background: linear-gradient(135deg, var(--navy) 0%, #0d3060 100%);
+  border-radius: var(--radius); padding: 1.6rem 2rem;
+  display: flex; align-items: flex-start; gap: 1.2rem; margin-top: 2rem;
+}
+.achieve-icon { font-size: 30px; flex-shrink: 0; }
+.achieve-lbl { font-family: var(--mono); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 5px; }
+.achieve-text { color: rgba(255,255,255,0.85); font-size: 14px; line-height: 1.7; }
+.achieve-text strong { color: #fff; }
+
+/* SYSTEMS */
+#systems { background: var(--surface); border-bottom: 1px solid var(--border); }
+.sys-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+.sys-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.3rem; border-left: 4px solid var(--navy-mid); }
+.sys-title { font-size: 12px; font-weight: 600; color: var(--navy); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.7rem; }
+.sys-items { display: flex; flex-wrap: wrap; gap: 5px; }
+.sys-tag { font-size: 11px; color: var(--text-mid); background: var(--surface); border: 1px solid var(--border); padding: 2px 8px; border-radius: 4px; }
+
+/* CLIENT ENGAGEMENTS */
+#projects { background: #fff; border-bottom: 1px solid var(--border); }
+.region-block { margin-bottom: 3rem; }
+.region-header { display: flex; align-items: center; gap: 12px; margin-bottom: 1.2rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--border); }
+.region-flag { font-size: 24px; }
+.region-title { font-family: var(--serif); font-size: 22px; color: var(--navy); }
+.region-count { margin-left: auto; font-family: var(--mono); font-size: 10px; color: var(--teal); letter-spacing: 0.1em; background: var(--teal-light); border: 1px solid rgba(14,116,144,0.2); padding: 3px 12px; border-radius: 4px; }
+.client-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+.client-card {
+  background: var(--off-white); border: 1px solid var(--border); border-radius: 8px;
+  padding: 1rem 1.2rem; display: flex; align-items: flex-start; gap: 10px;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+}
+.client-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); border-color: var(--navy-light); }
+.c-icon-box {
+  width: 36px; height: 36px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+  border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px;
+}
+.client-card.intl { border-left: 3px solid var(--gold); }
+.client-card.intl .c-icon-box { background: linear-gradient(135deg, var(--gold), #d4a040); }
+.c-name { font-size: 13px; font-weight: 600; color: var(--navy); line-height: 1.3; margin-bottom: 2px; }
+.c-loc { font-size: 11px; color: var(--text-light); font-family: var(--mono); }
+
+/* CONTACT */
+#contact { background: var(--navy); position: relative; overflow: hidden; }
+#contact::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 60% at 80% 30%, rgba(14,116,144,0.2) 0%, transparent 60%),
+              radial-gradient(ellipse 40% 40% at 10% 80%, rgba(192,139,46,0.1) 0%, transparent 50%);
+}
+.contact-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+.contact-sec-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.contact-sec-title { font-family: var(--serif); font-size: clamp(26px, 3.5vw, 38px); color: #fff; line-height: 1.15; margin-bottom: 2rem; }
+.contact-list { display: flex; flex-direction: column; gap: 10px; }
+.contact-link {
+  display: flex; align-items: center; gap: 14px; padding: 1rem 1.3rem;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px; text-decoration: none; color: inherit; transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+.contact-link:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.25); transform: translateX(4px); }
+.ci { font-size: 20px; flex-shrink: 0; }
+.cl { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 0.1em; text-transform: uppercase; font-family: var(--mono); }
+.cv { font-size: 14px; color: #fff; margin-top: 1px; }
+.edu-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 1.6rem; border-top: 3px solid var(--gold); }
+.edu-deg { font-family: var(--serif); font-size: 22px; color: #fff; margin-bottom: 4px; }
+.edu-uni { font-size: 14px; font-weight: 600; color: var(--gold); }
+.edu-detail { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+.edu-hr { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 1.2rem 0; }
+.lang-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+.lang-pill { font-size: 12px; font-weight: 600; background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.2); padding: 4px 14px; border-radius: 20px; }
+.visa-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.75); background: rgba(14,116,144,0.2); border: 1px solid rgba(14,116,144,0.4); padding: 7px 14px; border-radius: 6px; margin-top: 0.8rem; }
+
+/* FOOTER */
+footer { background: #040e1c; color: rgba(255,255,255,0.28); text-align: center; padding: 2rem; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; border-top: 1px solid rgba(255,255,255,0.05); }
+footer span { color: rgba(255,255,255,0.6); }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.revealed { opacity: 1; transform: none; }
+
+/* RESPONSIVE */
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .about-wrap, .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .stat-grid { grid-template-columns: 1fr 1fr; }
+  .h-stat { border-right: none; min-width: 100px; margin-right: 0; }
+  .client-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-monogram">KA</div>
+    <div class="nav-logo">Khurshidalam Ansari</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#competencies">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Clients</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://www.linkedin.com/in/khurshidalam-ansari-99b734113" target="_blank" rel="noopener" class="nav-li-btn">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452H16.89v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    LinkedIn
+  </a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">CSV &amp; OT Compliance Specialist</div>
+    <h1 class="hero-name">Khurshidalam<br><span>Ansari</span></h1>
+    <p class="hero-tagline">10+ years delivering validation excellence across pharmaceutical &amp; life sciences in KSA &amp; India</p>
+    <div class="hero-pills">
+      <span class="pill">GAMP 5</span><span class="pill">FDA 21 CFR Part 11</span><span class="pill">EU Annex 11</span>
+      <span class="pill">SFDA</span><span class="pill">MHRA</span><span class="pill">WHO</span>
+      <span class="pill">OT/ICS Security</span><span class="pill">Transferable Iqama</span>
+    </div>
+    <div class="hero-cta">
+      <a href="mailto:Khurshidansari64@gmail.com" class="btn btn-gold">✉ Get in Touch</a>
+      <a href="https://www.linkedin.com/in/khurshidalam-ansari-99b734113" target="_blank" rel="noopener" class="btn btn-li">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452H16.89v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn Profile
+      </a>
+      <a href="#experience" class="btn btn-ghost">View Experience ↓</a>
+    </div>
+    <div class="hero-stats">
+      <div class="h-stat"><div class="h-stat-num">10+</div><div class="h-stat-lbl">Years of experience</div></div>
+      <div class="h-stat"><div class="h-stat-num">20+</div><div class="h-stat-lbl">Pharma clients</div></div>
+      <div class="h-stat"><div class="h-stat-num">2</div><div class="h-stat-lbl">Countries — IN &amp; KSA</div></div>
+      <div class="h-stat"><div class="h-stat-num">0</div><div class="h-stat-lbl">Major audit gaps</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-wrap reveal">
+      <div class="about-text">
+        <div class="sec-label">Profile</div>
+        <h2 class="sec-title">Dedicated to<br>validation excellence</h2>
+        <div class="sec-line"></div>
+        <p>Senior CSV &amp; OT Compliance Specialist with a decade of progressive experience in the pharmaceutical and life sciences sector. Specialized in GxP compliance, Computer System Validation, Operational Technology supervision and IT Quality Management Systems.</p>
+        <p>Well-versed in global regulatory frameworks including GAMP 5, FDA 21 CFR Part 11, EU Annex 11, SFDA, MHRA and WHO guidelines. Proven expertise in OT/ICS cybersecurity, risk assessment, protocol execution and supporting global regulatory audits.</p>
+        <p>Recognized for strong documentation discipline, cross-functional leadership and delivering end-to-end validation excellence in highly regulated GMP environments. Currently serving as OT Supervisor at AJA Pharmaceutical Industries, Hail, KSA.</p>
+      </div>
+      <div class="stat-grid">
+        <div class="stat-card"><div class="stat-num">10+</div><div class="stat-lbl">Years of experience</div></div>
+        <div class="stat-card"><div class="stat-num">20+</div><div class="stat-lbl">Client engagements</div></div>
+        <div class="stat-card"><div class="stat-num">2</div><div class="stat-lbl">Countries — IN &amp; KSA</div></div>
+        <div class="stat-card"><div class="stat-num">0</div><div class="stat-lbl">Major audit gaps</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPETENCIES -->
+<section id="competencies" class="section">
+  <div class="container">
+    <div class="sec-label reveal">Core competencies</div>
+    <h2 class="sec-title reveal">Areas of Expertise</h2>
+    <div class="comp-grid">
+      <div class="comp-card reveal">
+        <div class="comp-icon">⚖️</div>
+        <div class="comp-heading">Regulatory &amp; Compliance</div>
+        <div class="comp-tags"><span class="tag">GMP</span><span class="tag">GAMP 5</span><span class="tag">FDA 21 CFR Part 11</span><span class="tag">EU Annex 11</span><span class="tag">SFDA</span><span class="tag">MHRA</span><span class="tag">WHO</span></div>
+      </div>
+      <div class="comp-card reveal">
+        <div class="comp-icon">🔬</div>
+        <div class="comp-heading">Validation Expertise</div>
+        <div class="comp-tags"><span class="tag">CSV Lifecycle</span><span class="tag">IQ/OQ/PQ</span><span class="tag">URS/FRS/DS</span><span class="tag">Traceability Matrices</span><span class="tag">Validation Plans &amp; Reports</span></div>
+      </div>
+      <div class="comp-card reveal">
+        <div class="comp-icon">🔒</div>
+        <div class="comp-heading">OT/ICS &amp; Cybersecurity</div>
+        <div class="comp-tags"><span class="tag">OT Network Monitoring</span><span class="tag">ICS/SCADA Security</span><span class="tag">Firewall Management</span><span class="tag">OT Segmentation</span><span class="tag">Incident Response</span></div>
+      </div>
+      <div class="comp-card reveal">
+        <div class="comp-icon">🖥️</div>
+        <div class="comp-heading">Systems &amp; Technologies</div>
+        <div class="comp-tags"><span class="tag">PLC</span><span class="tag">SCADA</span><span class="tag">HMI</span><span class="tag">ERP</span><span class="tag">CDS</span><span class="tag">BMS</span><span class="tag">EMS</span><span class="tag">TraceLink</span><span class="tag">Chromeleon</span><span class="tag">Empower</span></div>
+      </div>
+      <div class="comp-card reveal">
+        <div class="comp-icon">🤝</div>
+        <div class="comp-heading">Leadership &amp; Soft Skills</div>
+        <div class="comp-tags"><span class="tag">Team Leadership</span><span class="tag">Vendor Management</span><span class="tag">Cross-functional Collaboration</span><span class="tag">Audit Readiness</span><span class="tag">CAPA</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="sec-label reveal">Career history</div>
+    <h2 class="sec-title reveal">Professional Experience</h2>
+    <div class="timeline">
+
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header"><div class="exp-role">OT Supervisor</div><div class="exp-period">Feb 2026 – Present</div></div>
+          <div class="exp-company">AJA Pharmaceutical Industries · Hail, Kingdom of Saudi Arabia</div>
+          <ul class="exp-bullets">
+            <li>Led onsite operations, monitoring and technical support for all OT/ICS systems including manufacturing, OT networks, lab instruments, CCTV, access control and time synchronization in a GMP environment.</li>
+            <li>Managed OT/ICS asset inventory, risk assessments, lifecycle documentation, change control and cybersecurity compliance per SOPs and CSV requirements.</li>
+            <li>Performed full CSV validation lifecycle: URS, Risk Assessments, IQ/OQ/PQ execution, traceability matrices and validation reports.</li>
+            <li>Directed GxP OT network monitoring, segmentation, firewall management, incident response, RCA and CAPA with the Cybersecurity team.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header"><div class="exp-role">CSV Engineer</div><div class="exp-period">Feb 2024 – Feb 2026</div></div>
+          <div class="exp-company">Advanced Pharmaceutical Industries (BPharma) · Jeddah, KSA</div>
+          <ul class="exp-bullets">
+            <li>Led end-to-end validation lifecycle for multiple GxP systems in compliance with FDA, SFDA, MHRA and WHO requirements.</li>
+            <li>Administered the TraceLink Serialization portal — implementation, configuration, user management and master data maintenance.</li>
+            <li>Designed, implemented and validated company-wide Access Control Systems; managed role-based access across all IT systems.</li>
+            <li>Executed technical troubleshooting, RCA and CAPA implementation for system-related deviations with full documentation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header"><div class="exp-role">Senior Executive – CSV &amp; Compliance</div><div class="exp-period">Aug 2022 – Jan 2024</div></div>
+          <div class="exp-company">Wockhardt Ltd. · Daman, India</div>
+          <ul class="exp-bullets">
+            <li>Directed end-to-end CSV operations across two GMP manufacturing facilities ensuring compliance with GAMP 5, MHRA and WHO.</li>
+            <li>Primary audit liaison during regulatory inspections — achieved zero major compliance gaps across all audit engagements.</li>
+            <li>Conducted vendor assessments, supplier qualifications and periodic system reviews.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header"><div class="exp-role">Senior Executive – IT Compliance</div><div class="exp-period">Dec 2021 – Jul 2022</div></div>
+          <div class="exp-company">Cadila Pharmaceutical Ltd. · Dholka, Gujarat, India</div>
+          <ul class="exp-bullets">
+            <li>Reviewed and approved CSV deliverables for GxP systems prior to system release.</li>
+            <li>Coordinated with vendors on instrument qualification, validation activities and troubleshooting.</li>
+            <li>Administered and monitored user access controls for CDS, Non-CDS and Process Control Systems (PCS).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header"><div class="exp-role">Validation Executive</div><div class="exp-period">Aug 2020 – Dec 2021</div></div>
+          <div class="exp-company">Instrumentation &amp; Control Solutions (ICS) · Indore, India &nbsp;|&nbsp; Clients: Lupin Ltd., Sun Pharmaceutical Industries</div>
+          <ul class="exp-bullets">
+            <li>Led GAP assessments and periodic compliance assessments for QC and production systems.</li>
+            <li>Maintained PLC/SCADA inventory; performed qualification and validation from an IT administration perspective.</li>
+            <li>Executed data backup and retrieval procedures for manufacturing automation systems.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header"><div class="exp-role">Senior Validation Executive</div><div class="exp-period">Oct 2018 – May 2020</div></div>
+          <div class="exp-company">GAMP Services · Vadodara, Gujarat, India</div>
+          <ul class="exp-bullets">
+            <li>Delivered end-to-end CSV projects for diverse pharma clients covering PLC, HMI, SCADA and ERP systems.</li>
+            <li>Authored, reviewed and approved comprehensive validation documentation packages per GAMP 5.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header"><div class="exp-role">Validation Engineer / Project Engineer / Service Engineer</div><div class="exp-period">Sep 2015 – Sep 2018</div></div>
+          <div class="exp-company">Telnet Services · DMP Technologies · ACVPL · India</div>
+          <ul class="exp-bullets">
+            <li>Executed validation protocols for QC laboratory GxP systems per GAMP 5 and FDA 21 CFR Part 11.</li>
+            <li>Performed calibration of critical process instruments and supported HVAC system validation.</li>
+            <li>Supported cross-functional teams during system qualification exercises and regulatory audits.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="achievement-banner reveal">
+      <div class="achieve-icon">🏆</div>
+      <div>
+        <div class="achieve-lbl">Key Achievement</div>
+        <div class="achieve-text"><strong>Appreciation Letter — Lupin Ltd.</strong> Received formal recognition for exceptional support in Chromeleon 6.8 software installation and end-to-end CSV validation of the entire Boisar plant following a critical cyber-attack on the Chromatography server.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SYSTEMS -->
+<section id="systems" class="section">
+  <div class="container">
+    <div class="sec-label reveal">Technical breadth</div>
+    <h2 class="sec-title reveal">Validated Equipment &amp; Systems</h2>
+    <div class="sys-grid reveal">
+      <div class="sys-card">
+        <div class="sys-title">Lab Instrument Software</div>
+        <div class="sys-items">
+          <span class="sys-tag">Chromeleon</span><span class="sys-tag">Empower</span><span class="sys-tag">Biovis Image Plus</span>
+          <span class="sys-tag">Equisoft</span><span class="sys-tag">GtekNet</span><span class="sys-tag">LabSolutions</span>
+          <span class="sys-tag">Mastersizer</span><span class="sys-tag">OpenLab</span><span class="sys-tag">Qtegra</span>
+          <span class="sys-tag">Rudolf PC Interface</span><span class="sys-tag">Spectra Manager</span>
+          <span class="sys-tag">Tiamo</span><span class="sys-tag">Vitek 2 Compact</span><span class="sys-tag">XRD</span>
+        </div>
+      </div>
+      <div class="sys-card">
+        <div class="sys-title">Enterprise Software</div>
+        <div class="sys-items">
+          <span class="sys-tag">ERP</span><span class="sys-tag">PERP 24x7</span>
+          <span class="sys-tag">eCTD Management</span><span class="sys-tag">TraceLink Serialization</span>
+        </div>
+      </div>
+      <div class="sys-card">
+        <div class="sys-title">PLC/SCADA &amp; Manufacturing</div>
+        <div class="sys-items">
+          <span class="sys-tag">Autoclave</span><span class="sys-tag">Blender</span><span class="sys-tag">Blister + Cartonator</span>
+          <span class="sys-tag">BMS</span><span class="sys-tag">CDAS</span><span class="sys-tag">Coating/Auto Coater</span>
+          <span class="sys-tag">Compression</span><span class="sys-tag">EMS</span><span class="sys-tag">FBP</span>
+          <span class="sys-tag">Glass Processing Line</span><span class="sys-tag">Labeling Line</span>
+          <span class="sys-tag">Leak Test</span><span class="sys-tag">Metal Detector</span>
+          <span class="sys-tag">RMG</span><span class="sys-tag">Stability Chambers (ICDAS)</span>
+          <span class="sys-tag">Track &amp; Trace</span><span class="sys-tag">WFI</span><span class="sys-tag">PW</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT ENGAGEMENTS -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="sec-label reveal">Project portfolio</div>
+    <h2 class="sec-title reveal">Client Engagements</h2>
+    <p class="reveal" style="color: var(--text-mid); margin-bottom: 2.5rem; max-width: 600px;">Delivered validation excellence across 20+ pharmaceutical organizations spanning international and national markets across KSA and India.</p>
+
+    <!-- International -->
+    <div class="region-block reveal">
+      <div class="region-header">
+        <span class="region-flag">🌍</span>
+        <div class="region-title">International — Kingdom of Saudi Arabia</div>
+        <span class="region-count">2 Clients</span>
+      </div>
+      <div class="client-grid">
+        <div class="client-card intl">
+          <div class="c-icon-box">🏭</div>
+          <div><div class="c-name">Advanced Pharmaceutical Industries (BPharma)</div><div class="c-loc">Jeddah, KSA</div></div>
+        </div>
+        <div class="client-card intl">
+          <div class="c-icon-box">🏭</div>
+          <div><div class="c-name">AJA Pharmaceutical Industries</div><div class="c-loc">Hail, KSA</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- National India -->
+    <div class="region-block reveal">
+      <div class="region-header">
+        <span class="region-flag">🇮🇳</span>
+        <div class="region-title">National — India</div>
+        <span class="region-count">18 Clients</span>
+      </div>
+      <div class="client-grid">
+        <div class="client-card">
+          <div class="c-icon-box">💊</div>
+          <div><div class="c-name">Alembic Pharmaceuticals Ltd</div><div class="c-loc">Vadodara, Gujarat</div></div>
+        </div>
+        <div class="client-card">
+          <div class="c-icon-box">🔬</div>
+          <div><div class="c-name">Alembic Research Centre</div><div class="c-loc">Vadodara, Gujarat</div></div>
+        </div>
+        <div class="client-card">
+          <div class="c-icon-box">💊</div>
+          <div><div class="c-name">Alkem Laboratories Ltd</div><div class="c-loc">Bharuch, Gujarat</div></div>
+        </div>
+        <div class="client-card">
+          <div class="c-icon-box">🧬</div>
+          <div><div class="c-name">CTX Lifesciences Pvt. Ltd</div><div class="c-loc">Surat, Gujarat</div></div>
+        </div>
+        <div class="client-card">
+          <div class="c-icon-box">💊</div>
+          <div><div class="c-name">Cadila Pharmaceutical Ltd</div><div class="c-loc">Ahmedabad, Gujarat</div></div>
+        </div>
+        <div class="client-card">
+          <div class="c-icon-box">🏆</div>
+          <div><div class="c-name">Lupin Ltd</div><div class="c-loc">Boisar, Maharashtra</div></div>
+        </div>
+        <div class="client-card">
+          <div class="c-icon-box">🌐</div>
+          <div><div class="c-name">Mylan Laboratories Ltd</div><div class="c-loc">Indore, Madhya Pradesh</div></div>
+        </div>
+        <div class="client-card">
+          <div class="c-icon-box">💊</div>
+          <div><div class="c-name">Marksans Pharma Ltd</div><div class="c-loc">Goa</div></div>
+        </div>
+        <div class="client-card">
+          <div class="c-icon-box">🔬</div>
+          <div><div class="c-name">Micro Labs Ltd</div><div class="c-loc">Sikkim</div></div>
+        </div>
+        <div class="client-card">
+          <div class="c-icon-box">🌏</div>
+          <div><div class="c-name">Otsuka Pharmaceuticals India Pvt. Ltd</div><div class="c-loc">Ahmedabad, Gujarat</div></div>
+        </div>
+        <div class="client-card">
+          <div class="c-icon-box">🧪</div>
+          <div><div class="c-name">Shrinivas Gujarat Lab Pvt. Ltd</div><div class="c-loc">Baddi, Himachal Pradesh</div></div>
+        </div>
+        <div class="client-card">
+          <div class="c-icon-box">🧬</div>
+          <div><div class="c-name">Supriya Lifescience Ltd</div><div class="c-loc">Chiplun, Maharashtra</div></div>
+        </div>
+        <div class="client-card">
+          <div class="c-icon-box">☀️</div>
+          <div><div class="c-name">Sun Pharmaceutical Industries Ltd</div><div class="c-loc">Vadodara, Gujarat &amp; Paonta Sahib, HP</div></div>
+        </div>
+        <div class="client-card">
+          <div class="c-icon-box">🌿</div>
+          <div><div class="c-name">Swiss Garnier Genexiaa Sciences Pvt. Ltd</div><div class="c-loc">Sikkim</div></div>
+        </div>
+        <div class="client-card">
+          <div class="c-icon-box">💊</div>
+          <div><div class="c-name">Unichem Laboratories</div><div class="c-loc">Goa</div></div>
+        </div>
+        <div class="client-card">
+          <div class="c-icon-box">💊</div>
+          <div><div class="c-name">Watson Pharma Pvt. Ltd</div><div class="c-loc">Goa</div></div>
+        </div>
+        <div class="client-card">
+          <div class="c-icon-box">🔬</div>
+          <div><div class="c-name">Wockhardt Research Centre</div><div class="c-loc">Aurangabad, Maharashtra</div></div>
+        </div>
+        <div class="client-card">
+          <div class="c-icon-box">🏭</div>
+          <div><div class="c-name">Wockhardt Ltd</div><div class="c-loc">Daman</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="reveal">
+        <div class="contact-sec-label">Get in touch</div>
+        <h2 class="contact-sec-title">Let's connect</h2>
+        <div class="contact-list">
+          <a href="mailto:Khurshidansari64@gmail.com" class="contact-link">
+            <div class="ci">✉</div><div><div class="cl">Email</div><div class="cv">Khurshidansari64@gmail.com</div></div>
+          </a>
+          <a href="https://www.linkedin.com/in/khurshidalam-ansari-99b734113" target="_blank" rel="noopener" class="contact-link">
+            <div class="ci">💼</div><div><div class="cl">LinkedIn</div><div class="cv">linkedin.com/in/khurshidalam-ansari</div></div>
+          </a>
+          <a href="tel:+966506328607" class="contact-link">
+            <div class="ci">📱</div><div><div class="cl">Phone — KSA</div><div class="cv">+966 506 328 607</div></div>
+          </a>
+          <a href="tel:+919426466492" class="contact-link">
+            <div class="ci">📞</div><div><div class="cl">Phone — India</div><div class="cv">+91 942 646 6492</div></div>
+          </a>
+          <div class="contact-link">
+            <div class="ci">📍</div><div><div class="cl">Location</div><div class="cv">Hail, Kingdom of Saudi Arabia</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="edu-card">
+          <div class="contact-sec-label" style="margin-bottom: 0.8rem;">Education</div>
+          <div class="edu-deg">B.Sc. Instrumentation</div>
+          <div class="edu-uni">Sardar Patel University (SPU)</div>
+          <div class="edu-detail">Anand, Gujarat, India · 2009 – 2012</div>
+          <hr class="edu-hr">
+          <div class="contact-sec-label" style="margin-bottom: 0.6rem;">Languages</div>
+          <div class="lang-pills">
+            <span class="lang-pill">English</span><span class="lang-pill">Hindi</span><span class="lang-pill">Gujarati</span>
+          </div>
+          <hr class="edu-hr">
+          <div class="contact-sec-label" style="margin-bottom: 0.6rem;">Visa Status</div>
+          <div class="visa-badge">✅ Transferable Iqama — available for opportunities across KSA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>Khurshidalam Ansari</span> &nbsp;·&nbsp; CSV &amp; OT Compliance Specialist &nbsp;·&nbsp; Hail, KSA &nbsp;·&nbsp; 2026
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); }),
+    { threshold: 0.1 }
+  );
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
